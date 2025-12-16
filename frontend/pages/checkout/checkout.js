@@ -37,14 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (btnShowNewAddress && newAddressForm) {
     btnShowNewAddress.addEventListener("click", function () {
-      // Toggle form visibility
-      newAddressForm.classList.toggle("hidden");
-      // Update button text
-      if (newAddressForm.classList.contains("hidden")) {
-        btnShowNewAddress.textContent = "Add New Address";
-      } else {
-        btnShowNewAddress.textContent = "Hide Form";
-      }
+      // Show form and hide this button
+      newAddressForm.classList.remove("hidden");
+      btnShowNewAddress.classList.add("hidden");
+    });
+  }
+
+  // Handle Cancel button
+  const btnCancelAddress = document.getElementById("btn-cancel-new-address");
+  if (btnCancelAddress && newAddressForm && btnShowNewAddress) {
+    btnCancelAddress.addEventListener("click", function () {
+      newAddressForm.classList.add("hidden");
+      btnShowNewAddress.classList.remove("hidden");
+      // Optional: Clear form
+      newAddressForm.reset();
     });
   }
 

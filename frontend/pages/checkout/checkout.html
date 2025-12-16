@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Styles -->
   <link rel="stylesheet" href="../../css/main.css" />
   <link rel="stylesheet" href="./checkout.css" />
@@ -44,14 +45,23 @@
 
           <div class="form-buttons">
             <button type="submit" class="yellow-btn">Save Address</button>
-            <!-- <button type="button" id="btn-cancel-new-address" class="black-btn">Cancel</button> -->
+            <button type="button" id="btn-cancel-new-address" class="black-btn">Cancel</button>
           </div>
         </form>
 
         <!-- Payment -->
         <h2 class="section-title">Payment Method</h2>
         <div id="payment-card" class="payment-card selected">
-          Cash on Delivery
+          <i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery
+        </div>
+        <div class="payment-card" style="opacity: 0.6; cursor: not-allowed;">
+          <i class="fa-regular fa-credit-card"></i> Credit Card (Coming Soon)
+        </div>
+        <div class="payment-card" style="opacity: 0.6; cursor: not-allowed;">
+          <i class="fa-solid fa-mobile-screen-button"></i> Mobile Wallet (Coming Soon)
+        </div>
+        <div class="payment-card" style="opacity: 0.6; cursor: not-allowed;">
+          <i class="fa-brands fa-paypal"></i> PayPal (Coming Soon)
         </div>
       </div>
 
