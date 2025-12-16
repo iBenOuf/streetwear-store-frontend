@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Luxury Streetwear Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="./profile.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main class="container" style="margin-top: 2rem; min-height: 60vh;">
+        <h1 class="section-title">My Profile</h1>
+
+        <div id="profile-content" class="profile-container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="profile-avatar">U</div>
+                    <div class="profile-info">
+                        <h2 id="profile-name">User</h2>
+                        <p id="profile-email">user@example.com</p>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Member Since</span>
+                        <span class="detail-value" id="profile-date">December 2025</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Role</span>
+                        <span class="detail-value" id="profile-role">Customer</span>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="btn btn-primary" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../../js/main.js"></script>
+    <script src="./profile.js"></script>
+</body>
+
+</html>

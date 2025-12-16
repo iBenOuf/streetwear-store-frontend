@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopping Cart - Luxury Streetwear Store</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="./cart.css" />
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main class="container cart-page" style="margin-top:2rem; min-height:60vh;">
+        <h1 class="section-title">Shopping Cart</h1>
+
+        <div class="cart-grid">
+            <!-- LEFT: Items -->
+            <section id="cart-items-column" class="card items-column">
+                <!-- Empty / Items container -->
+                <div id="cart-container" class="cart-container">
+                    <!-- Content populated by cart.js -->
+                </div>
+            </section>
+
+            <!-- RIGHT: Summary -->
+            <aside id="order-summary" class="card summary-column">
+                <div class="summary-sticky">
+                    <h2>Order Summary</h2>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">EGP 0.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="summary-shipping">Free</span>
+                    </div>
+
+                    <hr />
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="summary-total">EGP 0.00</span>
+                    </div>
+
+                    <button id="checkout-btn" class="btn btn-primary full">Proceed to Checkout</button>
+                    <button id="continue-btn" class="btn btn-outline full">Continue Shopping</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="./cart.js"></script>
+</body>
+
+</html>

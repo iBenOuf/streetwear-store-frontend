@@ -1,0 +1,136 @@
+/* Search Bar */
+.search-bar {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto 30px auto;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 50px 12px 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #D4AF37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.search-bar input::placeholder {
+    color: #666;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #D4AF37;
+    cursor: pointer;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    padding: 0 5%;
+    gap: 30px;
+    margin-bottom: 4rem;
+}
+
+/* Sidebar */
+aside {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+aside h3 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.filter-box {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.filter-header i {
+    color: #D4AF37;
+}
+
+.filter-list {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.filter-list li {
+    padding: 8px 10px;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filter-list li:hover {
+    color: #D4AF37;
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.filter-list li.active {
+    color: #D4AF37;
+    background-color: rgba(212, 175, 55, 0.15);
+    font-weight: 600;
+}
+
+/* Products Grid (inherits styles from main.css) */
+.products-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Luxury Streetwear Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="./home.css" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        ELEVATE YOUR
+        <span class="hero-accent">STREET STYLE</span>
+      </h1>
+      <p class="hero-subtitle">
+        Premium luxury streetwear for the modern urban lifestyle
+      </p>
+      <div class="hero-buttons">
+        <a href="../shop/shop.html" class="btn btn-primary">Shop Collection</a>
+        <a href="#featured-products" class="btn btn-secondary">Explore Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section featured-section" id="featured-products">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+
+      <div class="products-grid"></div>
+
+      <div class="text-center mt-xl">
+        <a href="../shop/shop.html" class="btn btn-outline">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section categories-section">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+
+      <div class="categories-grid">
+        <div class="category-card" onclick="window.location.href='../shop/shop.html?category=1'">
+          <div class="category-overlay">
+            <div class="category-icon">👕</div>
+            <h3 class="category-name">Hoodies</h3>
+            <p class="category-description">Explore our collection</p>
+            <span class="category-count">Shop Now →</span>
+          </div>
+        </div>
+
+        <div class="category-card" onclick="window.location.href='../shop/shop.html?category=2'">
+          <div class="category-overlay">
+            <div class="category-icon">👔</div>
+            <h3 class="category-name">T-Shirts</h3>
+            <p class="category-description">Explore our collection</p>
+            <span class="category-count">Shop Now →</span>
+          </div>
+        </div>
+
+        <div class="category-card" onclick="window.location.href='../shop/shop.html?category=3'">
+          <div class="category-overlay">
+            <div class="category-icon">🧥</div>
+            <h3 class="category-name">Jackets</h3>
+            <p class="category-description">Explore our collection</p>
+            <span class="category-count">Shop Now →</span>
+          </div>
+        </div>
+
+        <div class="category-card" onclick="window.location.href='../shop/shop.html?category=4'">
+          <div class="category-overlay">
+            <div class="category-icon">🎒</div>
+            <h3 class="category-name">Accessories</h3>
+            <p class="category-description">Explore our collection</p>
+            <span class="category-count">Shop Now →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3 class="feature-title">Fast Delivery</h3>
+          <p class="feature-text">
+            Quick and reliable shipping to your doorstep
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3 class="feature-title">Premium Quality</h3>
+          <p class="feature-text">
+            Only the finest materials and craftsmanship
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title">Secure Payment</h3>
+          <p class="feature-text">Safe and secure payment options</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h3 class="feature-title">Exclusive Designs</h3>
+          <p class="feature-text">
+            Unique pieces you won't find anywhere else
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="../../js/mockData.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="./home.js"></script>
+</body>
+
+</html>

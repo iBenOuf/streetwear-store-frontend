@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Luxury Streetwear Store</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="./checkout.css" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main class="container" style="margin-top: 2rem; min-height: 60vh">
+    <h1 class="section-title">Checkout</h1>
+
+    <div class="checkout-container">
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <!-- Shipping Section -->
+        <h2 class="section-title">Shipping Address</h2>
+        <div id="addresses-list"></div>
+
+        <button id="btn-show-new-address" class="yellow-btn">
+          Add New Address
+        </button>
+
+        <form id="new-address-form" class="address-form hidden">
+          <label>Label <input name="label" required /></label>
+          <label>Street <input name="street" required /></label>
+          <label>City <input name="city" required /></label>
+          <label>State <input name="state" /></label>
+          <label>Postal Code <input name="postalCode" /></label>
+          <label>Country <input name="country" value="Egypt" required /></label>
+          <label>Phone <input name="phone" required /></label>
+
+          <div class="form-buttons">
+            <button type="submit" class="yellow-btn">Save Address</button>
+            <!-- <button type="button" id="btn-cancel-new-address" class="black-btn">Cancel</button> -->
+          </div>
+        </form>
+
+        <!-- Payment -->
+        <h2 class="section-title">Payment Method</h2>
+        <div id="payment-card" class="payment-card selected">
+          Cash on Delivery
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="right-column">
+        <h2 class="section-title">Order Summary</h2>
+
+        <div id="order-items"></div>
+
+        <div class="total">
+          Total: <span id="total-amount">0.00</span> EGP
+        </div>
+
+        <button id="btn-place-order" class="yellow-btn big-btn">
+          Place Order
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../../js/main.js"></script>
+  <script src="./checkout.js"></script>
+</body>
+
+</html>

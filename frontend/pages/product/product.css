@@ -1,0 +1,326 @@
+/* Product Page */
+#product-details {
+    padding: 2rem 0;
+}
+
+/* Layout */
+
+/* Put image + info side by side */
+.product-layout {
+    display: flex;
+    /* children in a row */
+    gap: var(--spacing-xl);
+    /* space between left & right */
+    align-items: flex-start;
+}
+
+/* LEFT: big image box */
+.product-image-wrapper {
+    flex: 1;
+    /* take half width */
+    background: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.product-image-large {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* RIGHT: info box */
+.product-info-wrapper {
+    flex: 1;
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+/* Small category text */
+.product-breadcrumb {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-gold);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Title, description, price */
+.product-title {
+    margin-bottom: var(--spacing-xs);
+}
+
+.product-description-long {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.product-price-main {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Mobile: stack on top of each other */
+@media (max-width: 768px) {
+    .product-layout {
+        flex-direction: column;
+    }
+
+    .product-info-wrapper {
+        margin-top: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+}
+
+.product-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right,
+            var(--border-color),
+            transparent);
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+}
+
+/* One block of info (size / color / stock / etc.) */
+.product-section {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Small label like "Select Size" */
+.product-section-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Row of size buttons */
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+/* Individual size button */
+.size-option {
+    min-width: 48px;
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    /* dark box */
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+/* Hover effect */
+.size-option:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-1px);
+}
+
+/* Selected size (we'll add this class with JS later) */
+.size-option.active {
+    background: var(--accent-gold);
+    /* gold when active */
+    border-color: var(--accent-gold);
+    color: var(--bg-primary);
+    font-weight: 600;
+}
+
+/* Row of color buttons (we only have 1 now, but later can add more) */
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+/* Color button – small rounded rectangle, similar to size */
+.color-option {
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    /* dark by default */
+    color: var(--text-primary);
+    /* bright text for visibility */
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+/* Small color swatch circle */
+.color-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+/* Hover effect */
+.color-option:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-1px);
+}
+
+/* Selected color – gold, like in your design */
+.color-option.active {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: var(--bg-primary);
+    font-weight: 600;
+}
+
+/* Stock section – little badge */
+.stock-section {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Base stock badge */
+.stock-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-sm);
+    /* small rounded, like size buttons */
+    border: 1px solid var(--border-color);
+    /* normal grey border, NOT green */
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* In-stock style: dark green box + bright green text */
+.stock-badge.stock-in {
+    background-color: #003b16;
+    /* dark green background */
+    color: var(--success-color);
+    /* bright green text */
+}
+
+/* QUANTITY + ADD TO CART SECTION */
+.quantity-section {
+    margin-top: var(--spacing-md);
+}
+
+/* Row that holds quantity box + Add to Cart */
+.product-actions-row {
+    display: flex;
+    flex-direction: row;
+    /* force side-by-side */
+    align-items: stretch;
+    /* same height */
+    gap: var(--spacing-md);
+    /* space between them */
+}
+
+/* The dark rectangle with - 1 + */
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.75rem 1.5rem;
+    min-width: 180px;
+
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+
+    flex-shrink: 0;
+    /* don't let it squish */
+}
+
+/* The - and + buttons */
+.qty-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+/* The number in the middle */
+.qty-value {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+/* Big gold Add to Cart button */
+.add-to-cart-btn {
+    flex: 1;
+    /* stretch and fill the row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+/* Thin line under the Add to Cart row */
+.product-divider {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    border: none;
+    border-top: 1px solid var(--border-color);
+    /* subtle grey line */
+}
+
+/* Brand / Material block */
+.product-meta {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Each row (Brand, Material) */
+.product-meta-row {
+    margin-bottom: 0.25rem;
+}
+
+/* "Brand:" / "Material:" label part */
+.product-meta-label {
+    font-weight: 700;
+    color: var(--text-primary);
+    /* white-ish */
+}
+
+/* The value part (Street Kings, 80% Cotton...) */
+.product-meta-value {
+    color: var(--text-secondary);
+    /* grey-ish */
+}

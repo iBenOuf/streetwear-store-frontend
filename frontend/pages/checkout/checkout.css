@@ -1,0 +1,141 @@
+/* Checkout Page */
+
+.checkout-container {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+/* LEFT / RIGHT columns */
+.left-column,
+.right-column {
+    width: 50%;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+}
+
+.section-title {
+    color: #ffcc00;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+/* Buttons */
+.yellow-btn {
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.yellow-btn:hover {
+    opacity: 0.8;
+}
+
+.black-btn {
+    background: #000;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.big-btn {
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+}
+
+/* Payment */
+.payment-card {
+    padding: 15px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.payment-card.selected {
+    border-color: #ffcc00;
+    background: #222;
+}
+
+/* Address list */
+.address-card {
+    border: 1px solid #ffcc00;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    position: relative;
+    background: #151515;
+    cursor: pointer;
+}
+
+.address-card:hover {
+    background: #1b1b1b;
+}
+
+.address-card input {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    color: #ff4444;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* New Address Form */
+.address-form label {
+    display: block;
+    margin: 10px 0;
+}
+
+.address-form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.address-form.hidden {
+    display: none;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Order Summary */
+.summary-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.total {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Toast */
+.cg-toast {
+    padding: 10px;
+    border-radius: 6px;
+}

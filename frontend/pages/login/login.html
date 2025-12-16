@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Luxury Streetwear Store</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="container">
+
+        <div class="forms">
+
+            <!-- Login -->
+            <form id="loginForm" class="form active">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required type="email" placeholder="Email" autocomplete="email"
+                    spellcheck="false" inputmode="email">
+
+                <input type="password" placeholder="Password" required autocomplete="current-password" minlength="6"
+                    maxlength="32">
+                <button type="submit">Login</button>
+                <p>Don't have an account? <span id="showRegister">Register</span></p>
+            </form>
+
+
+            <!-- Register -->
+            <form id="registerForm" class="form">
+                <h2>Register</h2>
+                <input type="text" placeholder="Name" required id="reg-name" autocomplete="name" minlength="3"
+                    maxlength="40" spellcheck="false">
+
+                <input type="email" placeholder="Email" required id="reg-email" autocomplete="email" inputmode="email"
+                    spellcheck="false">
+
+                <input type="password" placeholder="Password" required id="reg-password" autocomplete="new-password"
+                    minlength="6" maxlength="32">
+
+                <button type="submit">Register</button>
+                <p>Already have an account? <span id="showLogin">Login</span></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="./login.js"></script>
+
+</body>
+
+</html>

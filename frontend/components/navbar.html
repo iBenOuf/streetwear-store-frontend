@@ -1,0 +1,207 @@
+<!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-content">
+            <!-- Logo -->
+            <a href="../home/home.html" class="navbar-logo">
+                <span class="logo-text">STREETWEAR</span>
+                <span class="logo-accent">STORE</span>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="../home/home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../shop/shop.html" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../cart/cart.html" class="nav-link">
+                            <span>Cart</span>
+                            <span class="cart-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../login/login.html" class="nav-link" id="login-link">Login</a>
+                    </li>
+                </ul>
+
+                <!-- User Greeting -->
+                <div class="navbar-user">
+                    <span class="user-greeting" id="user-greeting"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Navbar Styles */
+    .navbar {
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 0;
+        width: 100%;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Logo */
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .logo-text {
+        color: var(--text-primary);
+    }
+
+    .logo-accent {
+        color: var(--accent-gold);
+    }
+
+    /* Mobile Toggle */
+    .navbar-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-primary);
+        transition: all 0.3s ease;
+    }
+
+    /* Navigation Menu */
+    .navbar-menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navbar-nav {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color var(--transition-fast);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link:hover {
+        color: var(--accent-gold);
+    }
+
+    /* Cart Badge */
+    .cart-badge {
+        background-color: var(--accent-gold);
+        color: var(--bg-primary);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        min-width: 20px;
+        text-align: center;
+        display: none;
+    }
+
+    /* User Section */
+    .navbar-user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .user-greeting {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .btn-sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .navbar-toggle {
+            display: flex;
+        }
+
+        .navbar-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            flex-direction: column;
+            padding: 1rem;
+            display: none;
+        }
+
+        .navbar-menu.active {
+            display: flex;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .nav-item {
+            width: 100%;
+        }
+
+        .nav-link {
+            padding: 0.5rem 0;
+        }
+
+        .navbar-user {
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+    }
+</style>
