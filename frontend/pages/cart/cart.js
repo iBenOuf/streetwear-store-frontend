@@ -93,7 +93,7 @@ function emptyStateHTML() {
     return `
     <div class="empty-state">
       <p>Your cart is currently empty.</p>
-      <button id="start-shopping" class="btn btn-primary" onclick="window.location.href='/frontend/pages/shop/shop.html'">Start Shopping</button>
+      <button id="start-shopping" class="btn btn-primary" onclick="window.location.href='../shop/shop.html'">Start Shopping</button>
     </div>
   `;
 }
